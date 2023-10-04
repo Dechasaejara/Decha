@@ -59,9 +59,21 @@ navToggler.addEventListener("click", toggleNavbar);
 const header = document.querySelector("[data-header]");
 
 const activeHeader = function () {
-  window.scrollY > 50 ? header.classList.add("active")
-    : header.classList.remove("active");
+  window.scrollY > 50 ? header.classList.add("active ")
+    : header.classList.remove("active ");
 }
 
 window.addEventListener("scroll", activeHeader);
 
+
+const header1 = document.querySelector('.header');
+
+function changeHeaderBackground() {
+  if (window.scrollY > 10) {
+    header1.classList.add('scrolled');
+  } else {
+    header1.classList.remove('scrolled');
+  }
+}
+
+window.addEventListener('scroll', changeHeaderBackground);

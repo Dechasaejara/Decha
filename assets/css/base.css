@@ -107,11 +107,13 @@
    */
 
   --shadow: 0 2px 2px hsla(0, 0%, 22%, 0.08);
+  --shadow-1: 0px 8px 18px 2px rgba(0,0,0,0.2);
 
   /**
    * border radius
    */
 
+  --radius-10: 10px;
   --radius-50: 50px;
   --radius-pill: 100px;
   --radius-circle: 50%;
@@ -201,16 +203,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   overflow: hidden;
-}
-
-.mainlayout {
-  /* background-color: red;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- align-items: center;
- height: 100vh; */
-
 }
 
 body.loaded {
@@ -356,7 +348,17 @@ body.loaded {
   background-color: var(--clr-gray-100);
   overflow: hidden;
 }
-
+.section-title{
+  text-align: center;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: .5 rem;
+}
 
 
 
@@ -405,6 +407,23 @@ body.loaded {
 
 
 /*-----------------------------------*\
+  #Logo
+\*-----------------------------------*/
+.logo {
+  width: 40px;
+  display: flex;
+  align-items: center;
+
+}
+
+.logo span {
+  margin-left: 5px;
+  color: var(--clr-gray-300);
+  font-size: var(--fs-26);
+}
+
+
+/*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
 
@@ -422,7 +441,9 @@ body.loaded {
   z-index: 4;
   transition: var(--transition-1);
 }
-
+.header.scrolled {
+  background-color: #333; 
+}
 .header.active {
   background-color: var(--clr-accent);
   box-shadow: var(--shadow);
@@ -458,6 +479,7 @@ body.loaded {
   visibility: visible;
   transition-duration: 0.5s;
   transition-delay: 0s;
+
 }
 
 .navbar>* {
@@ -480,7 +502,7 @@ body.loaded {
   padding: 16px 15px;
   transition: var(--transition-1);
   color: hsl(19, 100%, 70%);
-  
+
 }
 
 .navbar-link:is(:hover, :focus-visible, .active) {

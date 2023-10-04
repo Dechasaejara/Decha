@@ -1,11 +1,21 @@
 @import url("./base.css");
 @import url("./components/btn.css");
+@import url("./components/card.css");
 
+.section-title>p {
+  color: var(--clr-accent);
+  text-transform: capitalize;
+  margin: 1rem;
+
+}
+
+.section-title h2 {
+  color: var(--clr-secondary-light);
+}
 
 /*-----------------------------------*\
-  #HERO
+  # Hero start
 \*-----------------------------------*/
-
 .hero {
   position: relative;
   background-image: url("../images/hero1.png");
@@ -18,12 +28,20 @@
   height: 100vh;
 }
 
-.hero-content{
+.hero .container {
+  margin-top: 5rem;
+  height: 50%;
+}
+
+.hero-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-around;
+  height: 100%;
+
 
 }
+
 .hero-subtitle {
   color: var(--clr-gray-300);
   text-transform: uppercase;
@@ -32,6 +50,146 @@
   margin-block-end: 20px;
 }
 
-.hero-text { margin-block: 25px; }
+.hero-text {
+  margin-block: 25px;
+}
 
-.headline-lg{ color: var(--clr-gray-500)}
+.hero-text span {
+  color: var(--clr-gray-100);
+  width: 50%;
+}
+
+@media (max-width: 631px) {
+
+  .hero-text span {
+    display: none;
+  }
+}
+
+.headline-lg {
+  color: var(--clr-gray-700)
+}
+
+/*-----------------------------------*\
+  # Hero End
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  # Services Start
+\*-----------------------------------*/
+.services {
+  background-color: var(--clr-gray-300);
+
+}
+
+.services h2 {
+  padding-bottom: 2rem;
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  gap: 4rem;
+}
+
+.services .container>* {
+  width: 100%;
+  height: 100%;
+}
+
+.small-text {
+  color: var(--clr-secondary-light);
+  text-transform: uppercase;
+}
+
+.service-card {
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  background-color: var(--clr-white);
+}
+
+.service-card .card-media {
+  background-color: transparent;
+  color: var(--clr-primary-light);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: var(--fs-32);
+  padding: 2rem;
+}
+
+.service-card:hover {
+  background-color: var(--clr-primary-dark);
+  color: var(--clr-white);
+}
+
+.service-card h3 {
+  text-align: center;
+  font-size: var(--fs-32);
+  padding: 1rem;
+  color: var(--clr-gray-500);
+}
+
+/*-----------------------------------*\
+  # Services End
+\*-----------------------------------*/
+
+
+/*-----------------------------------*\
+  # Portfolio Start
+\*-----------------------------------*/
+
+.portfolio {
+  background-color: var(--clr-gray-100);
+
+}
+
+.portfolio .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem;
+  padding: 0;
+}
+
+.portfolio-card {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: var(--shadow-1);
+  background: var(--clr-white);
+  border-radius: var(--radius-10);
+  transition: transform 0.3s ease;
+}
+.portfolio-card img{
+  transition: transform 0.3s ease;
+}
+.portfolio-card:hover img{
+  transform: scale(1.2);
+}
+
+.portfolio-card-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio-card-tags > span {
+  color: var(--clr-accent);
+}
+
+.portfolio-card-tags .likes {
+  display: flex;
+  color: var(--clr-gray-700);
+  align-items: center;
+}
+.portfolio-card-tags .likes span{
+  padding: 2px;
+  color: var(--clr-primary-light);
+}
+/*-----------------------------------*\
+  # Portfolio End
+\*-----------------------------------*/
