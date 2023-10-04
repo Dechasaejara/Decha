@@ -2,11 +2,10 @@
 @import url("./components/btn.css");
 @import url("./components/card.css");
 
-.section-title>p {
+.section-title > p {
   color: var(--clr-accent);
   text-transform: capitalize;
   margin: 1rem;
-
 }
 
 .section-title h2 {
@@ -38,8 +37,6 @@
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
-
-
 }
 
 .hero-subtitle {
@@ -60,14 +57,13 @@
 }
 
 @media (max-width: 631px) {
-
   .hero-text span {
     display: none;
   }
 }
 
 .headline-lg {
-  color: var(--clr-gray-700)
+  color: var(--clr-gray-700);
 }
 
 /*-----------------------------------*\
@@ -79,7 +75,6 @@
 \*-----------------------------------*/
 .services {
   background-color: var(--clr-gray-300);
-
 }
 
 .services h2 {
@@ -93,7 +88,7 @@
   gap: 4rem;
 }
 
-.services .container>* {
+.services .container > * {
   width: 100%;
   height: 100%;
 }
@@ -136,24 +131,23 @@
   # Services End
 \*-----------------------------------*/
 
-
 /*-----------------------------------*\
   # Portfolio Start
 \*-----------------------------------*/
 
 .portfolio {
   background-color: var(--clr-gray-100);
-
 }
 
 .portfolio .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 5rem;
-  padding: 0;
+  padding: 0.5rem;
 }
 
 .portfolio-card {
+  position: relative;
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -164,10 +158,10 @@
   border-radius: var(--radius-10);
   transition: transform 0.3s ease;
 }
-.portfolio-card img{
+.portfolio-card img {
   transition: transform 0.3s ease;
 }
-.portfolio-card:hover img{
+.portfolio-card:hover img {
   transform: scale(1.2);
 }
 
@@ -186,10 +180,43 @@
   color: var(--clr-gray-700);
   align-items: center;
 }
-.portfolio-card-tags .likes span{
+.portfolio-card-tags .likes span {
   padding: 2px;
   color: var(--clr-primary-light);
+}
+.portfolio .dynamic-btn {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+}
+.card:hover .dynamic-btn {
+  visibility: visible;
 }
 /*-----------------------------------*\
   # Portfolio End
 \*-----------------------------------*/
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;/* Semi-transparent background */
+  display: none;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+}
+
+#popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#popup-close-btn {
+  margin-top: 10px;
+}

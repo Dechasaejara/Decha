@@ -59,31 +59,31 @@
                         </li>
 
                         <li class="navbar-item">
-                            <a href="./pages/Services.html" class="label-lg navbar-link has-after">Services</a>
+                            <a href="#ServicesId" class="label-lg navbar-link has-after">Services</a>
                         </li>
 
                         <li class="navbar-item">
-                            <a href="./pages/Portfolio.html" class="label-lg navbar-link has-after">Portfolio</a>
+                            <a href="#PortfolioId" class="label-lg navbar-link has-after">Portfolio</a>
                         </li>
 
                         <li class="navbar-item">
-                            <a href="./pages/Resume.html" class="label-lg navbar-link has-after">Resume</a>
+                            <a href="#ResumeId" class="label-lg navbar-link has-after">Resume</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="./pages/Client.html" class="label-lg navbar-link has-after">Clients</a>
-                        </li>
-
-                        <li class="navbar-item">
-                            <a href="./pages/Pricing.html" class="label-lg navbar-link has-after">Pricing</a>
+                            <a href="#ClientId" class="label-lg navbar-link has-after">Clients</a>
                         </li>
 
                         <li class="navbar-item">
-                            <a href="./pages/Blog.html" class="label-lg navbar-link has-after">Blog</a>
+                            <a href="#PricingId" class="label-lg navbar-link has-after">Pricing</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <a href="#BlogId" class="label-lg navbar-link has-after">Blog</a>
                         </li>
                     </ul>
                 </nav>
 
-                <a href="./pages/Contact.html" class="btn btn-primary">Contact Now</a>
+                <a href="#ContactId" class="btn btn-primary">Contact Now</a>
 
                 <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler>
                     <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
@@ -123,9 +123,9 @@
                 <!-- Hero End -->
 
                 <!-- Services Start -->
-                <section class="section services">
+                <section class="section services" id="ServicesId">
                     <div class="section-title">
-                        <p >Services</p>
+                        <p>Services</p>
                         <h2 class="headline-lg ">What I Do </h2>
                     </div>
 
@@ -156,17 +156,23 @@
                     </div>
                 </section>
                 <!-- Services End -->
-
-                <!-- Portfolio Start -->
-                <section class="section portfolio">
-                    <div class="section-title">
-                        <p >VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</p>
-                        <h2 class="headline-lg ">My Portfolio</h2>
+                <div id="popup-container">
+                    <div id="popup-content">
+                      <h2>Welcome to the Popup!</h2>
+                      <p>This is the content of the popup.</p>
+                      <button id="popup-close-btn">Close Popup</button>
                     </div>
+                  </div>
+                <!-- Portfolio Start -->
+                <section class="section portfolio" id="PortfolioId">
+                    <div class="section-title">
+                        <p>VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</p>
+                        <h2 class="headline-lg ">My Portfolio</h2>
+                    </div>  
                     <div class="container">
                         <div class="card portfolio-card ">
                             <div class="img-holder">
-                                <img src="./assets/images/portfolio-02.webp" loading="lazy" 
+                                <img src="./assets/images/portfolio-02.webp" loading="lazy"
                                     alt="Website Design for Marketing Agency Startup" class="img-cover" />
                             </div>
                             <div class="portfolio-card-tags flex-row">
@@ -177,11 +183,12 @@
                                 </div>
                             </div>
                             <p>There are many variations of passages of Lorem </p>
+                            <a class=" btn btn-primary dynamic-btn">View More</a>
                         </div>
 
                         <div class="card portfolio-card ">
                             <div class="img-holder">
-                                <img src="./assets/images/portfolio-03.webp" loading="lazy" 
+                                <img src="./assets/images/portfolio-03.webp" loading="lazy"
                                     alt="Website Design for Marketing Agency Startup" class="img-cover" />
                             </div>
                             <div class="portfolio-card-tags flex-row">
@@ -192,10 +199,11 @@
                                 </div>
                             </div>
                             <p>There are many variations of passages of Lorem </p>
+                            <a class=" btn btn-primary dynamic-btn">View More</a>
                         </div>
                         <div class="card portfolio-card ">
                             <div class="img-holder">
-                                <img src="./assets/images/portfolio-04.webp" loading="lazy" 
+                                <img src="./assets/images/portfolio-04.webp" loading="lazy"
                                     alt="Website Design for Marketing Agency Startup" class="img-cover" />
                             </div>
                             <div class="portfolio-card-tags flex-row">
@@ -206,10 +214,11 @@
                                 </div>
                             </div>
                             <p>There are many variations of passages of Lorem </p>
+                            <a class=" btn btn-primary dynamic-btn">View More</a>
                         </div>
                         <div class="card portfolio-card ">
                             <div class="img-holder">
-                                <img src="./assets/images/portfolio-05.webp" loading="lazy" 
+                                <img src="./assets/images/portfolio-05.webp" loading="lazy"
                                     alt="Website Design for Marketing Agency Startup" class="img-cover" />
                             </div>
                             <div class="portfolio-card-tags flex-row">
@@ -220,10 +229,11 @@
                                 </div>
                             </div>
                             <p>There are many variations of passages of Lorem </p>
+                            <a class=" btn btn-primary dynamic-btn">View More</a>
                         </div>
                         <div class="card portfolio-card ">
                             <div class="img-holder">
-                                <img src="./assets/images/portfolio-06.webp" loading="lazy" 
+                                <img src="./assets/images/portfolio-06.webp" loading="lazy"
                                     alt="Website Design for Marketing Agency Startup" class="img-cover" />
                             </div>
                             <div class="portfolio-card-tags flex-row">
@@ -234,6 +244,7 @@
                                 </div>
                             </div>
                             <p>There are many variations of passages of Lorem </p>
+                            <a class=" btn btn-primary dynamic-btn">View More</a>
                         </div>
                     </div>
                 </section>
