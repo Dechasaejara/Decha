@@ -38,7 +38,7 @@
   }
   
   .btn-tertiary {
-    color: var(--clr-accent);
+    color: var(--clr-primary-light);
     background-color: var(--clr-primary-dark);
     --shadow-color: var(--clr-secondary-neutral);
     --hover-bg: var(--clr-primary-light);

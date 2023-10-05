@@ -75,9 +75,10 @@
      * typography
      */
 
-  --font-primary: 'Helvetica Neue', Arial, sans-serif;
+
+  --font-primary: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Helvetica Neue', Arial, sans-serif;
   --font-secondary: 'Times New Roman', Times, serif;
-  --font-heading: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   --font-code: 'Courier New', monospace;
 
   --fs-45: 4.5rem;
@@ -107,7 +108,7 @@
    */
 
   --shadow: 0 2px 2px hsla(0, 0%, 22%, 0.08);
-  --shadow-1: 0px 8px 18px 2px rgba(0,0,0,0.2);
+  --shadow-1: 0px 8px 18px 2px rgba(0, 0, 0, 0.2);
 
   /**
    * border radius
@@ -348,9 +349,11 @@ body.loaded {
   background-color: var(--clr-gray-100);
   overflow: hidden;
 }
-.section-title{
+
+.section-title {
   text-align: center;
 }
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -441,9 +444,11 @@ body.loaded {
   z-index: 4;
   transition: var(--transition-1);
 }
+
 .header.scrolled {
-  background-color: #333; 
+  background-color: #333;
 }
+
 .header.active {
   background-color: var(--clr-accent);
   box-shadow: var(--shadow);

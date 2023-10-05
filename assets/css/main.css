@@ -2,7 +2,7 @@
 @import url("./components/btn.css");
 @import url("./components/card.css");
 
-.section-title > p {
+.section-title>p {
   color: var(--clr-accent);
   text-transform: capitalize;
   margin: 1rem;
@@ -88,7 +88,7 @@
   gap: 4rem;
 }
 
-.services .container > * {
+.services .container>* {
   width: 100%;
   height: 100%;
 }
@@ -158,9 +158,11 @@
   border-radius: var(--radius-10);
   transition: transform 0.3s ease;
 }
+
 .portfolio-card img {
   transition: transform 0.3s ease;
 }
+
 .portfolio-card:hover img {
   transform: scale(1.2);
 }
@@ -171,7 +173,7 @@
   align-items: center;
 }
 
-.portfolio-card-tags > span {
+.portfolio-card-tags>span {
   color: var(--clr-accent);
 }
 
@@ -180,10 +182,12 @@
   color: var(--clr-gray-700);
   align-items: center;
 }
+
 .portfolio-card-tags .likes span {
   padding: 2px;
   color: var(--clr-primary-light);
 }
+
 .portfolio .dynamic-btn {
   position: absolute;
   bottom: 50%;
@@ -191,32 +195,68 @@
   transform: translateX(-50%);
   visibility: hidden;
 }
+
 .card:hover .dynamic-btn {
   visibility: visible;
 }
+
 /*-----------------------------------*\
   # Portfolio End
 \*-----------------------------------*/
-#popup-container {
+.card {
+  position: relative;
+}
+
+.popup-overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: red;/* Semi-transparent background */
-  display: none;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  backdrop-filter: blur(5px); /* Apply blur effect */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
 }
 
-#popup-content {
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 75%;
+  height: 70%;
 }
 
-#popup-close-btn {
-  margin-top: 10px;
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.detail-page {}
+
+.detail-info {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+}
+.detail-info > span{
+  padding: 2rem;
+  background-color: var(--clr-secondary-light);
+  color: var(--clr-primary-light);
+  text-align: center;
+  font-size: var(--fs-22);
+  font-weight: var(--fw-600);
+  font-family: var(--font-secondary);
+}
+.detail-btns {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
 }
