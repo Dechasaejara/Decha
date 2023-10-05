@@ -2,7 +2,7 @@
 @import url("./components/btn.css");
 @import url("./components/card.css");
 
-.section-title>p {
+.section-title > p {
   color: var(--clr-accent);
   text-transform: capitalize;
   margin: 1rem;
@@ -88,7 +88,7 @@
   gap: 4rem;
 }
 
-.services .container>* {
+.services .container > * {
   width: 100%;
   height: 100%;
 }
@@ -173,7 +173,7 @@
   align-items: center;
 }
 
-.portfolio-card-tags>span {
+.portfolio-card-tags > span {
   color: var(--clr-accent);
 }
 
@@ -200,9 +200,6 @@
   visibility: visible;
 }
 
-/*-----------------------------------*\
-  # Portfolio End
-\*-----------------------------------*/
 .card {
   position: relative;
 }
@@ -237,16 +234,16 @@
   cursor: pointer;
 }
 
-.detail-page {}
+.detail-page {
+}
 
 .detail-info {
   height: 100%;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-
 }
-.detail-info > span{
+.detail-info > span {
   padding: 2rem;
   background-color: var(--clr-secondary-light);
   color: var(--clr-primary-light);
@@ -259,4 +256,112 @@
   display: flex;
   justify-content: space-around;
   gap: 2rem;
+}
+
+/*-----------------------------------*\
+  # Portfolio End
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  # Resume Start
+\*-----------------------------------*/
+
+.resume {
+  background: var(--clr-gray-300);
+}
+
+.resume .tabs > ul {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.resume .tabs > ul li {
+  width: fit-content;
+  padding: 2rem;
+  background: var(--clr-gray-100);
+  box-shadow: var(--shadow-1);
+}
+.resume .expericens {
+  background: red;
+  height: 30vh;
+}
+.resume .eductations {
+  background: green;
+  height: 30vh;
+}
+.resume .skills {
+  background: yellow;
+  height: 30vh;
+}
+.resume .certification {
+  background: orange;
+  height: 30vh;
+}
+
+.tab-container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.tab-header {
+  display: flex;
+}
+
+.tab-button {
+  flex: 1;
+  background-color: #ddd;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  background-color: #ccc;
+}
+
+.tab-button.active {
+  background-color: #bbb;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.tab-content h2 {
+  margin-top: 0;
+}
+/*-----------------------------------*\
+  # Resume End
+\*-----------------------------------*/
+.carousel {
+  display: flex;
+  width: 100%;
+}
+
+.carousel > img {
+  flex: 0 0 100%;
+  max-width: 50rem;
+  object-fit: contain;
+}
+
+.carousel-navigation {
+  text-align: center;
+  margin-top: 10px;
+  color: black;
+}
+
+.carousel-navigation button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.carousel-navigation button:hover {
+  background-color: #ccc;
 }

@@ -155,3 +155,66 @@ popupOverlay.addEventListener("click", (event) => {
   }
 });
 
+/// Resume Tabs
+function openTab(evt, tabName) {
+  // Hide all tab content
+  const tabContent = document.getElementsByClassName('tab-content');
+  for (let i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = 'none';
+  }
+
+  // Remove 'active' class from all tab buttons
+  const tabButtons = document.getElementsByClassName('tab-button');
+  for (let i = 0; i < tabButtons.length; i++) {
+    tabButtons[i].classList.remove('active');
+  }
+
+  // Show the selected tab content and mark the button as active
+  document.getElementById(tabName).style.display = 'block';
+  evt.currentTarget.classList.add('active');
+}
+
+
+// Testimonial Coursel
+const carousel = document.querySelector('.carousel');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let currentIndex = 0;
+const interval = 3500; // Time between each slide change
+
+function startCarousel() {
+  setInterval(nextSlide, interval);
+}
+
+function showSlide(index) {
+  const slides = carousel.querySelectorAll('img');
+  slides.forEach((slide, i) => {
+    if (i === index) {
+      slide.style.display = 'block';
+    } else {
+      slide.style.display = 'none';
+    }
+  });
+}
+
+function prevSlide() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = 2; // Update the number to match the total number of slides
+  }
+  showSlide(currentIndex);
+}
+
+function nextSlide() {
+  currentIndex++;
+  if (currentIndex > 2) {
+    currentIndex = 0;
+  }
+  showSlide(currentIndex);
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+showSlide(currentIndex);
+startCarousel();
