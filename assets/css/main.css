@@ -2,7 +2,7 @@
 @import url("./components/btn.css");
 @import url("./components/card.css");
 
-.section-title > p {
+.section-title>p {
   color: var(--clr-accent);
   text-transform: capitalize;
   margin: 1rem;
@@ -88,7 +88,7 @@
   gap: 4rem;
 }
 
-.services .container > * {
+.services .container>* {
   width: 100%;
   height: 100%;
 }
@@ -173,7 +173,7 @@
   align-items: center;
 }
 
-.portfolio-card-tags > span {
+.portfolio-card-tags>span {
   color: var(--clr-accent);
 }
 
@@ -234,8 +234,7 @@
   cursor: pointer;
 }
 
-.detail-page {
-}
+.detail-page {}
 
 .detail-info {
   height: 100%;
@@ -243,7 +242,8 @@
   justify-content: space-around;
   flex-direction: column;
 }
-.detail-info > span {
+
+.detail-info>span {
   padding: 2rem;
   background-color: var(--clr-secondary-light);
   color: var(--clr-primary-light);
@@ -252,6 +252,7 @@
   font-weight: var(--fw-600);
   font-family: var(--font-secondary);
 }
+
 .detail-btns {
   display: flex;
   justify-content: space-around;
@@ -270,29 +271,39 @@
   background: var(--clr-gray-300);
 }
 
-.resume .tabs > ul {
+.resume .tabs>ul {
   display: flex;
   justify-content: center;
   padding: 2rem;
 }
-.resume .tabs > ul li {
+
+.resume .tabs>ul li {
   width: fit-content;
   padding: 2rem;
   background: var(--clr-gray-100);
   box-shadow: var(--shadow-1);
 }
+
 .resume .expericens {
-  background: red;
-  height: 30vh;
+
+  height: 250px;
 }
+
+.resume .expericens:hover {
+  background: var(--clr-accent);
+
+}
+
 .resume .eductations {
   background: green;
   height: 30vh;
 }
+
 .resume .skills {
   background: yellow;
   height: 30vh;
 }
+
 .resume .certification {
   background: orange;
   height: 30vh;
@@ -327,11 +338,177 @@
   display: none;
   padding: 20px;
   background-color: #f9f9f9;
+
 }
+
 
 .tab-content h2 {
   margin-top: 0;
 }
+
+
+
+
+.timeline {
+  position: relative;
+  display: flex;
+
+}
+
+@media (max-width: 885px) {
+  .timeline {
+    flex-direction: column;
+  }
+
+  .resume .tabs>ul li {
+    width: fit-content;
+    padding: 0;
+
+  }
+
+  .carousel>img {
+    overflow: hidden;
+    width: fit-content;
+  }
+
+  .tab-button {
+    padding: .2rem;
+  }
+
+  .timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 17%;
+    left: .18rem;
+    width: .8rem;
+    height: .6rem;
+    background-color: var(--clr-gray-300);
+  }
+}
+
+.timeline-item {
+
+  position: relative;
+  padding: 20px;
+  margin-bottom: 1rem;
+  padding-left: 6rem;
+  width: 100%;
+
+}
+
+@media (max-width: 885px) {
+  .timeline-item::after {
+    height: calc(100% - 20px);
+  }
+}
+
+.timeline-content {
+  padding: 1rem;
+  color: var(--clr-gray-900);
+  background: var(--clr-gray-100);
+  border-radius: var(--radius-10);
+
+}
+
+.timeline-content:hover {
+  box-shadow: var(--shadow-1);
+}
+
+.timeline-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+
+}
+
+.timeline-date {
+  font-size: 14px;
+  margin-bottom: 2rem;
+  color: #777;
+}
+
+.timeline-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: -.8rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--clr-gray-300);
+  z-index: 99;
+
+}
+
+.timeline-item:hover:before {
+
+  background-color: var(--clr-accent);
+
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: .5rem;
+  height: calc(100% + 6%);
+  background-color: var(--clr-gray-300);
+}
+
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 17%;
+  left: .18rem;
+  width: 5.8rem;
+  height: .6rem;
+  background-color: var(--clr-gray-300);
+}
+
+@media (max-width: 885px) {
+  .container {
+    margin: 0;
+    padding: .2;
+  }
+
+  .tab-content {
+    padding-left: 8px;
+    margin: 0;
+  }
+
+  .timeline-content {
+    padding: 0;
+    margin: 0;
+  }
+
+  .timeline {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .timeline-content::before {
+    width: 2.8rem;
+    z-index: 1;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin: 0;
+
+    padding-left: 2rem;
+    z-index: 2;
+  }
+
+}
+
 /*-----------------------------------*\
   # Resume End
 \*-----------------------------------*/
@@ -340,7 +517,7 @@
   width: 100%;
 }
 
-.carousel > img {
+.carousel>img {
   flex: 0 0 100%;
   max-width: 50rem;
   object-fit: contain;
