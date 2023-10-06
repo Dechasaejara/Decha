@@ -62,6 +62,19 @@ navToggler.addEventListener("click", toggleNavbar);
 
 // window.addEventListener("scroll", activeHeader);
 
+
+
+
+
+// Dark Mode Swithcer
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('change', () => {
+  body.classList.toggle('dark-mode');
+});
+
+
 // change header bg when scroll
 const header1 = document.querySelector(".header");
 
