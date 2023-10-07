@@ -58,7 +58,7 @@
   --clr-primary-bg-colored: var(--clr-primary-dark);
   --clr-secondary-bg-colored: var(--clr-secondary-dark);
   --clr-gray-bg-light: var(--clr-gray-100);
-  --clr-gray-bg-dark: var(--clr-gray-200);
+  --clr-gray-bg-dark: var(--clr-gray-300);
 
   /**
      * typography

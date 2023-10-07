@@ -92,7 +92,7 @@ function changeHeaderBackground() {
 window.addEventListener("scroll", changeHeaderBackground);
 
 // Show dynamic btn
-const cards = document.querySelectorAll(".portfolio-card");
+const cards = document.querySelectorAll(".portfolio-card1");
 cards.forEach((card) => {
   const button = card.querySelector(".dynamic-btn");
 
@@ -141,7 +141,7 @@ seeMoreButtons.forEach((button) => {
       <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores</p>
       <div class="detail-btns ">
       <a href="https://github.com/Dechasaejara/Decha-Portfolio" class=" btn btn-primary " id="">View Project</a>
-      <a class=" btn btn-tertiary ">Like This One</a>
+      <a class=" btn btn-secondary ">Like This One</a>
       </div>
 
     </div>

@@ -18,6 +18,7 @@
     text-transform: uppercase;
     max-width: max-content;
     letter-spacing: 2px;
+    margin: 1rem;
     padding: 10px 22px;
     border-radius: var(--radius-5);
     transition: var(--transition-1);
