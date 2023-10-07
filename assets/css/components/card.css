@@ -11,15 +11,17 @@
 
 
 .card {
-  box-shadow: 0 0 0 var(--clr-primary-light);
+  /* box-shadow: 0 0 0 var(--clr-primary-light); */
   display: flex;
   transition: var(--transition-1);
 }
 
-.card-md:is(:hover, :focus-within) { box-shadow: 5px 5px 0 var(--clr-primary-light); }
+.card-md:is(:hover, :focus-within) { 
+  /* box-shadow: 5px 5px 0 var(--clr-primary-light); */
+ }
 
 :is(.card-lg, .card-sm):is(:hover, :focus-within) {
-  box-shadow: 3px 3px 0 var(--clr-primary-light);
+  /* box-shadow: 3px 3px 0 var(--clr-primary-light); */
 }
 
 .card,
@@ -58,8 +60,8 @@
 }
 
 .card-media {
-  background-color: transparent;
-  color: var(--clr-primary-light);
+  /* background-color: transparent; */
+  /* color: var(--clr-primary-light); */
   display: grid;
   place-items: center;
   flex-shrink: 0;

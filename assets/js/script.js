@@ -77,12 +77,15 @@ darkModeToggle.addEventListener('change', () => {
 
 // change header bg when scroll
 const header1 = document.querySelector(".header");
+const footer1 = document.querySelector(".footer");
 
 function changeHeaderBackground() {
   if (window.scrollY > 10) {
     header1.classList.add("scrolled");
+    footer1.classList.add("scrolledf");
   } else {
     header1.classList.remove("scrolled");
+    footer1.classList.remove("scrolledf");
   }
 }
 
