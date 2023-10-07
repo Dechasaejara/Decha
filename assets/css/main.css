@@ -74,7 +74,7 @@
 \*-----------------------------------*/
 .hero {
   position: relative;
-  background-image: url("../images/hero2.png");
+  background-image: url("../images/heroLight.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,9 +82,14 @@
   text-align: left;
   overflow: hidden;
   height: 100vh;
+  filter: saturate(130%);
+ 
 }
 .dark-mode .hero {
-  background-image: url("../images/hero3.png");
+  background-image: url("../images/heroDark.png");
+  /* filter: brightness(150%); */
+  filter: hue-rotate(-150deg);
+ 
 }
 .hero .container {
   margin-top: 5rem;
@@ -96,6 +101,8 @@
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
+
+
 }
 
 .hero-subtitle {
@@ -108,10 +115,14 @@
 
 .hero-text {
   margin-block: 25px;
+  color: var(--clr-gray-800);
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  backdrop-filter: blur(1px); 
 }
 
 .hero-text span {
-  color: var(--clr-gray-text-light);
+  color: var(--clr-gray-400);
   width: 50%;
 }
 
